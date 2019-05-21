@@ -15,5 +15,9 @@ header('Access-Control-Allow-Origin: *');
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('noticias');
 });
+
+Route::get('/noticias','NoticiasController@index')->name('noticias');
+
+
